@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './output.module.css';
-// import Ball from '../../Ball';
 import Number from '../number/number';
+
 
 const Output = (numbers) => {
     const number = [];
@@ -10,8 +10,8 @@ const Output = (numbers) => {
         Object.entries(items).map(item => {
             if(item[1].count !== 2){
                 balls.push(item[1].id)
-                
-        }})})
+        }})
+})
     const shuffle = [];
     Object.values(numbers).map(items => {
         Object.entries(items).map(item => {
@@ -23,23 +23,13 @@ const Output = (numbers) => {
         }
     const set = new Set(shuffle);
     const unique = [...set];
-
     const bonus = unique[6];
     const winBalls = unique.slice(0, 6).sort((a, b) => a - b);
     
-    console.log(winBalls);
-    console.log(bonus);
-    // const onbutton = () => {return(number.splice(0,number.length,(number.push(winBalls),number.push(bonus))))}
-    // (number.splice(0,number.length,(number.push(winBalls),number.push(bonus))))
-    console.log(number);
+    (number.splice(0,number.length,(number.push(winBalls),number.push(bonus))))
 
         return (
             <ul className={styles.output}>
-                <div>
-                <button onClick={() => number.splice(0,number.length,(number.push(winBalls),number.push(bonus)))}>출력</button>
-                {/* <button>공유</button> */}
-                {/* {console.log(number)} */}
-                </div>
                 <Number onbutton={number}/ >
                 {/* <span>
                 <div className={styles.list}>

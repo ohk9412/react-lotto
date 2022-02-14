@@ -3,11 +3,8 @@ import Ball from '../../Ball';
 import styles from './number.module.css'
 
 const Number = ({onbutton}) => {
-    console.log(onbutton);
     const winBalls = onbutton[1];
     const bonus = onbutton[2];
-    console.log(winBalls);
-    console.log(bonus);
     if (winBalls != null){
     return(
     <span>
