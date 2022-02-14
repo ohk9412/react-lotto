@@ -1,0 +1,17 @@
+/* .navbar{
+    background-color: ghostwhite;
+} */
+
+
+.name {
+    margin-top: 0;
+    width: 100%;
+    font-size: 2rem;
+    color: ghostwhite;
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid;
+    background-color:rgb(43, 43, 44)
+
+}

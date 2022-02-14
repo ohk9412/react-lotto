@@ -1,0 +1,18 @@
+.output{
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding-top: 1rem;
+    height: 8rem;
+    border: 2px solid;
+    justify-content: space-between;
+}
+
+.list{
+    float: left;
+    padding: 1rem;
+}
+
+
+.bonus{
+    padding: 1rem;
+    overflow: hidden;
+}
