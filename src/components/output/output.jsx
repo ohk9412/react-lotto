@@ -28,8 +28,25 @@ const Output = (numbers) => {
     
     (number.splice(0,number.length,(number.push(winBalls),number.push(bonus))))
 
+
+    const {Kakao} = window;
+
+    const onClick=() =>{
+        Kakao.Link.sendCustom({
+            templateId: 71165,
+            templateArgs: {
+              'title': '추천 번호입니다ㅋ',
+              'description': `${winBalls} + ${bonus}`
+            }
+          });
+    }
+    
+
         return (
             <ul className={styles.output}>
+                <div>
+                    <button onClick={onClick}>공유</button>
+                </div>
                 <Number onbutton={number}/ >
                 {/* <span>
                 <div className={styles.list}>

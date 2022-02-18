@@ -1,17 +1,22 @@
-/* .navbar{
-    background-color: ghostwhite;
-} */
+.navbar{
+    justify-content: space-between;
+    background-color:rgb(43, 43, 44);
+    border-bottom: 2px solid;
+    position: relative;
+    display: flex;
+}
 
+.login{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
 
 .name {
-    margin-top: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 100%;
     font-size: 2rem;
     color: ghostwhite;
     padding: 0.5em;
-    text-align: center;
-    position: relative;
-    border-bottom: 2px solid;
-    background-color:rgb(43, 43, 44)
-
+    text-align: center; 
 }
