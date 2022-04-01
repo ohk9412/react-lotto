@@ -3,7 +3,8 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: url(./image/gmrgh.jpg) no-repeat;
-    background-size: cover;
+    /* background: url(./image/gmrgh.jpg) no-repeat; */
+    /* background-size: cover; */
+    background-color:silver;
     overflow: hidden;
 }

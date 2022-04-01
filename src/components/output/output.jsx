@@ -35,7 +35,7 @@ const Output = (numbers) => {
         Kakao.Link.sendCustom({
             templateId: 71165,
             templateArgs: {
-              'title': '추천 번호입니다ㅋ',
+              'title': '추천 번호입니다',
               'description': `${winBalls} + ${bonus}`
             }
           });
@@ -45,7 +45,7 @@ const Output = (numbers) => {
         return (
             <ul className={styles.output}>
                 <div>
-                    <button onClick={onClick}>공유</button>
+                    <button className={styles.button} onClick={onClick}></button>
                 </div>
                 <Number onbutton={number}/ >
                 {/* <span>

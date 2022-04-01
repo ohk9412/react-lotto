@@ -12,16 +12,12 @@ import styles from './navbar.module.css';
 //   }
 const Navbar = (props) => (
     <header className={styles.navbar}>
-            <h1 className={styles.name}>
-                ㅇㅅㅎㅂ
-            </h1>
-            {/* <a id="custom-login-btn" href="javascript:loginWithKakao()">
-            <img className={styles.login}
-                src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
-                width="100"
-                alt="카카오 로그인 버튼"
-                />
-            </a> */}
+            <div className={styles.namebox}>
+                <h1 className={styles.name}>
+                    인 생 한 방
+                </h1>
+                <h4 className={styles.subname}>로또번호추출기</h4>
+            </div>
 <script type="text/javascript">
 </script>
     </header>
