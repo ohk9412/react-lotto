@@ -47,7 +47,7 @@ class Select extends Component {
         {   
             this.state.numbers.map(number => 
             <button
-            id={number.id}
+            key={number.id}
             onClick={() => this.handleIncrement(number)}
             className={`${styles.button} ${number.count === 0 ? styles.white : number.count === 1 ? styles.grey : styles.pink }`}>
                 {number.id}
