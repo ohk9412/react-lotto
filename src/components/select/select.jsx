@@ -1,6 +1,7 @@
 import Output from '../output/output';
 import styles from './select.module.css';
 import React, { Component } from 'react';
+import Number from './../number/number';
 
 class Select extends Component {
     state ={
@@ -35,13 +36,25 @@ class Select extends Component {
         this.setState({numbers});
     };
 
+    handleReset = () => {
+        const numbers = this.state.numbers.map(number => {
+            if(number.count !== 0){
+             return{...number, count : 0}
+        }
+        return number;
+    });
+        this.setState({numbers});
+        };
+    
     
     render() {
         return (
     <section className={styles.select}>
         <ul className={styles.numberbutton}>
             <div>
-                <Output numbers={this.state.numbers}/>
+                <Output 
+                numbers={this.state.numbers}
+                onReset={this.handleReset}/>
             </div>
         <div className={styles.numbers}>
         {   

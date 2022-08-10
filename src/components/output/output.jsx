@@ -3,21 +3,22 @@ import styles from './output.module.css';
 import Number from '../number/number';
 
 
-const Output = (numbers) => {
+const Output = ({numbers, onReset}) => {
     const number = [];
     const balls = [];
-    Object.values(numbers).map(items => {
-        Object.entries(items).map(item => {
-            if(item[1].count !== 2){
-                balls.push(item[1].id)
+    Object.values(numbers).map(item => {
+            if(item.count !== 2){
+                balls.push(item.id)
         }})
-})
+        
+    Object.values(numbers).map(num => {
+        console.log(num.count);
+    })
     const shuffle = [];
-    Object.values(numbers).map(items => {
-        Object.entries(items).map(item => {
-            if(item[1].count === 1){
-                shuffle.push(item[1].id)
-        }})})
+    Object.values(numbers).map(item => {
+        if(item.count === 1){
+            shuffle.push(item.id)
+        }})
         while (balls.length > 0) {
             shuffle.push(balls.splice(Math.floor(Math.random() * balls.length), 1)[0]);
         }
@@ -40,12 +41,17 @@ const Output = (numbers) => {
             }
           });
     }
+
+    const Reset = () => {
+        onReset();
+    }
     
 
         return (
             <ul className={styles.output}>
                 <div>
                     <button className={styles.button} onClick={onClick}></button>
+                    <button className={styles.reset} onClick={Reset}></button>
                 </div>
                 <Number onbutton={number}/ >
                 {/* <span>
