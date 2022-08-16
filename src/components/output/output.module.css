@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+.buttons{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 4rem;
+}
+
 .reset {
     padding: 1rem 1rem 1rem 1rem;
     border: 0 solid;
@@ -17,7 +23,7 @@
     margin-left: 1rem;
 }
 
-.button{
+.kakao{
     padding: 1rem 1rem 1rem 1rem;
     border: 0 solid;
     border-radius :50%;

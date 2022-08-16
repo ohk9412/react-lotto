@@ -7,7 +7,7 @@ const Number = ({onbutton}) => {
     const bonus = onbutton[2];
     if (winBalls != null){
     return(
-    <span>
+    <span className={styles.Balls}>
         <div className={styles.list}>
             <div>당첨 숫자</div>
         <span>

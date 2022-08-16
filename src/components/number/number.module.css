@@ -1,9 +1,14 @@
 .output{
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     padding-top: 1rem;
+    padding: auto;
     height: 8rem;
     border: 2px solid;
-    justify-content: space-between;
+}
+
+.Balls{
+    display: flex;
+    justify-content: center;
 }
 
 .list{

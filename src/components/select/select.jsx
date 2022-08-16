@@ -1,7 +1,7 @@
 import Output from '../output/output';
 import styles from './select.module.css';
 import React, { Component } from 'react';
-import Number from './../number/number';
+
 
 class Select extends Component {
     state ={
@@ -19,15 +19,56 @@ class Select extends Component {
     {id:41,count:0}, {id:42,count:0}, {id:43,count:0}, {id:44,count:0},
     {id:45,count:0},
     ],
+        button :[
+            {add:1,del:0}
+        ],
 };
+
+    handleAdd = (evnet) => {
+        const button = this.state.button.map(bttn => {
+            if(evnet === 'add'){
+                if(bttn.add === 1){
+                    return {...bttn, add:0,del:0}
+                }
+                return {...bttn, add:1,del:0}
+            }
+            if(evnet ==='del'){
+                if(bttn.del === 1){
+                    return {...bttn, add:0,del:0}
+                }
+                return {...bttn, add:0,del:1}
+            }
+            return bttn;
+        });
+        this.setState({button});
+    };
+
+
+
+    // handleIncrement = number => {
+    //     const numbers = this.state.numbers.map(item => {
+    //         if(item.id === number.id){
+    //             if(number.count < 2){
+    //             return {...number, count:number.count+1}
+    //         }
+    //         return {...number,count:0}
+    //         }
+    //         return item;
+    //     });
+    //     this.setState({numbers});
+    // };
 
     handleIncrement = number => {
         const numbers = this.state.numbers.map(item => {
-            // console.log(item.id);
-            // console.log(number.id);
             if(item.id === number.id){
-                if(number.count < 2){
-                return {...number, count:number.count+1}
+                if(number.count === 0){
+                    if(this.state.button[0].del === 1){
+                        return {...number, count:2}
+                    }
+                    if(this.state.button[0].add === 1){
+                        return {...number, count:1}
+                    }
+                    return {...number, count:number.count}
             }
             return {...number,count:0}
             }
@@ -57,6 +98,7 @@ class Select extends Component {
                 onReset={this.handleReset}/>
             </div>
         <div className={styles.numbers}>
+
         {   
             this.state.numbers.map(number => 
             <button
@@ -67,6 +109,14 @@ class Select extends Component {
             </button>
             )
         }
+        <div className={styles.AddandDel}>
+        <button 
+        className={`${styles.Addnumber} ${this.state.button[0].add === 0 ? styles.white : styles.grey}`}
+        onClick={() => this.handleAdd('add')}>추가</button>
+        <button 
+        className={`${styles.Delnumber} ${this.state.button[0].del === 0 ? styles.white : styles.pink}`}
+        onClick={() => this.handleAdd('del')}>제거</button>
+        </div>
         </div>
         </ul>
     </section>

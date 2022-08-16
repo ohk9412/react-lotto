@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
 .select{
     max-width: 50rem;
     display: flex;
@@ -33,6 +36,7 @@
     padding: 6px 6px 6px 6px;
     align-items: center;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    
 }
 
 
@@ -41,7 +45,9 @@
     width: 30px;
     margin: 0.1rem;
     border: 1px solid;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-family: 'Dongle';
+    padding: 0 0 0 0;
 }
 
 .button.white{
@@ -56,3 +62,42 @@
     background-color: pink;
 }
 
+.AddandDel{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Nanum Gothic';
+}
+
+
+
+.Addnumber{
+    font-family: 'Dongle';
+    font-size: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Addnumber.white{
+    background-color: white;
+}
+
+.Addnumber.grey{
+    background-color: grey;
+}
+
+
+.Delnumber{
+    font-family: 'Dongle';
+    font-size: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Delnumber.white{
+    background-color: white;
+}
+
+.Delnumber.pink{
+    background-color: pink;
+}
