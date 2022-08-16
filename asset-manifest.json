@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-lotto/static/css/main.ceeb027f.css",
-    "main.js": "/react-lotto/static/js/main.18fbd815.js",
+    "main.css": "/react-lotto/static/css/main.8cf77661.css",
+    "main.js": "/react-lotto/static/js/main.e538a5de.js",
     "index.html": "/react-lotto/index.html",
-    "main.ceeb027f.css.map": "/react-lotto/static/css/main.ceeb027f.css.map",
-    "main.18fbd815.js.map": "/react-lotto/static/js/main.18fbd815.js.map"
+    "main.8cf77661.css.map": "/react-lotto/static/css/main.8cf77661.css.map",
+    "main.e538a5de.js.map": "/react-lotto/static/js/main.e538a5de.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceeb027f.css",
-    "static/js/main.18fbd815.js"
+    "static/css/main.8cf77661.css",
+    "static/js/main.e538a5de.js"
   ]
 }
