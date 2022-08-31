@@ -4,6 +4,7 @@ import Select from './components/select/select';
 import Navbar from './components/navbar/navbar';
 import initialize from './service/kakao';
 
+
 function App() {
   useEffect(() => {initialize();},[])
   return (

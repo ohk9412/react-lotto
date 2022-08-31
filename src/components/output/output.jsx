@@ -6,12 +6,12 @@ import Number from '../number/number';
 const Output = ({numbers, onReset}) => {
     const number = [];
     const balls = [];
-    Object.values(numbers).map(item => {
+    numbers.map(item => {
             if(item.count !== 2){
                 balls.push(item.id)
         }});
     const shuffle = [];
-    Object.values(numbers).map(item => {
+    numbers.map(item => {
         if(item.count === 1){
             shuffle.push(item.id)
         }})
@@ -23,12 +23,12 @@ const Output = ({numbers, onReset}) => {
     const bonus = unique[6];
     const winBalls = unique.slice(0, 6).sort((a, b) => a - b);
     
-    (number.splice(0,number.length,(number.push(winBalls),number.push(bonus))))
+    (number.splice(0,number.length,(number.push(winBalls),number.push(bonus))));
 
 
     const {Kakao} = window;
 
-    const onClick=() =>{
+    const onClick= () =>{
         Kakao.Link.sendCustom({
             templateId: 71165,
             templateArgs: {
@@ -40,32 +40,18 @@ const Output = ({numbers, onReset}) => {
 
     const Reset = () => {
         onReset();
-    }
+    };
     
 
-        return (
-            <div className={styles.output}>
-                <div className={styles.buttons}>
-                    <button className={styles.kakao} onClick={onClick}></button>
-                    <button className={styles.reset} onClick={Reset}></button>
-                </div>
-                <Number onbutton={number}/ >
-                {/* <span>
-                <div className={styles.list}>
-                    <div>당첨 숫자</div>
-                <span>
-                {winBalls.map((v) => (
-                    <Ball key={v} number={v} />
-                ))}
-                </span>
-                </div>
-                <div className={styles.bonus}>
-                    <div>보너스</div>
-                    {bonus && <Ball key={bonus} number={bonus} />}
-                </div>
-                </span> */}
+    return (
+        <div className={styles.output}>
+            <div className={styles.buttons}>
+                <button className={styles.kakao} onClick={onClick}></button>
+                <button className={styles.reset} onClick={Reset}></button>
             </div>
-            );
-            };
+            <Number onbutton={number}/ >
+        </div>
+        );
+    };
 
 export default Output;
